@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/CSS/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+  .provide-banner {
+    background-image: url(/images/service1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* object-fit: fill; */
+    height: 60vh;
+    width: 100%;
+    position: relative;
+    /* padding: 100px 50px; */
+  }
+
+  .provide-overlay {
+    position: absolute;
+    height: 100%;
+    background-color: rgba(18, 92, 144, 0.66);
+    width: 100%;
+  }
+
+  .provide-banner>h1 {
+    position: absolute;
+    z-index: 22;
+    color: black;
+    margin-top: 100px;
+    font-size: 48px;
+    margin-left: 50px;
+    color: white;
+  }
+
+  .provide-banner>p {
+    position: absolute;
+    z-index: 22;
+    color: black;
+    top: 90px;
+    font-size: 18px;
+    margin-top: 90px;
+    margin-left: 50px;
+    color: white;
+    width: 50%;
+
+
+  }
+
+  .provide-contents {
+    padding: 50px;
+  }
+
+  .provide-contents>h3 {
+    margin-bottom: 30px;
+    color: #61657E;
+    ;
+    font-size: 26px;
+  }
+
+
+  .provide-contents-item {
+    /* margin-bottom: 20px; */
+    display: flex;
+    /* gap: 20px; */
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 50px;
+  }
+
+  .provide-contents-item>span {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--tg-primary-color);
+    box-shadow: 4px 4px 15px rgba(254, 93, 20, 0.4);
+    color: var(--white);
+    background-color: #FE5D14;
+    font-size: 15px;
+    margin-right: 15px;
+    font-weight: 900;
+  }
+
+  .provider-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: rgb(244, 246, 255);
+    grid-gap: 30px;
+    padding: 50px;
+
+
+  }
+
+  .provider-card {
+    /* flex: 0 0 auto; */
+    /* width: 33.33333333%; */
+    background-color: white;
+    /* margin-left: 20%; */
+    margin-top: 40px;
+    border-radius: 8px;
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    position: relative;
+  }
+
+  .provider-card>h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #1c1c1c;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .provider-card>img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+
+  .provider-number {
+    margin-bottom: 0;
+    position: absolute;
+    right: 8px;
+    top: 10px;
+    background: linear-gradient(180deg, rgba(254, 93, 20, 0.14) 0%, rgba(254, 93, 20, 0) 100%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: .8;
+    color: red;
+  }
+
+  .provider-card::after {
+    background: linear-gradient(100.16deg, #FE5D14 1.96%, rgba(28, 28, 28, 0) 198.08%);
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    z-index: -1;
+    background: linear-gradient(100.16deg, #FE5D14 1.96%, rgba(28, 28, 28, 0) 198.08%);
+    opacity: 0;
+    transition: .3s linear;
+  }
+
+  .cards-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    background-color: black;
+    background: linear-gradient(100.16deg, #FE5D14 1.96%, rgba(28, 28, 28, 0) 198.08%);
+    cursor: pointer;
+  }
+
+  .overlay-contents {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+  }
+
+  .overlay-contents>p {
+    font-size: 1.1rem;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+
+  }
+
+  .provider-card:hover .cards-overlay {
+    opacity: 0.85;
+  }
+</style>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/logo.JPG" alt="logo" />
+      <h1>SSGM <span>Logistics</span></h1>
+    </div>
+    <ul class="navbar-lists">
+      <li><a href="/index.html" class="navbar-links">Home</a></li>
+      <li><a href="#about" class="navbar-links">About</a></li>
+      <li><a href="" class="navbar-links">Services</a></li>
+      <li><a href="" class="navbar-links">Home</a></li>
+      <li><a href="" class="navbar-links">Contact</a></li>
+
+      <!-- <li><a href="" class="navbar-links contact-link">Contact</a></li> -->
+      <li>
+        <a href="#enquiry" class=" quotue-link">Get a Quotue
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <section class="provide-banner">
+    <h1>Our Services</h1>
+    <p>We are providing entire supply chain solutions for today’s adaptive trial landscape, we ship materials at all
+      temperature ranges to investigator sites, depots, and directly to patients’ homes.</p>
+    <div class="services-slider">
+
+    </div>
+    <div class="provide-overlay"></div>
+
+  </section>
+  <div class="provide-contents">
+    <h3>Providing flexible supply chain solutions for today’s adaptive trial landscape, we ship materials at all
+      temperature ranges to investigator sites, depots, and directly to patients’ homes.</h3>
+
+    <div class="provide-contents-item">
+      <span class="about-us-circle"> <i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+      <h3>Transport of biological specimens to all regional labs</h3>
+    </div>
+    <div class="provide-contents-item">
+      <span class="about-us-circle"> <i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+      <h3>Biological sample kit building in all regions, including COVID-19 test kit building
+      </h3>
+    </div>
+    <div class="provide-contents-item">
+      <span class="about-us-circle"> <i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+      <h3>GMP storage and distribution of all clinical trial materials, including relabeling when needed
+      </h3>
+    </div>
+    <div class="provide-contents-item">
+      <span class="about-us-circle"> <i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+      <h3>Transport of clinical drug substance, IMP, clinical drug product, and ancillary supplies to anywhere in the
+        world
+      </h3>
+    </div>
+    <div class="provide-contents-item">
+      <span class="about-us-circle"> <i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+      <h3>Direct to/from patient and home healthcare services
+      </h3>
+    </div>
+    <div class="provide-contents-item">
+      <span class="about-us-circle"> <i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+      <h3>Cell and gene therapy supply chain services including a global LN2 (cryogenic) network..
+      </h3>
+    </div>
+    
+
+  </div>
+  <div class="provider-cards">
+    <div class="provider-card">
+      <img src="/images/24.png" alt="">
+      <h2>24X365 days</h2>
+      <p class="provider-number">01</p>
+      <div class="cards-overlay">
+        <div class="overlay-contents">
+          <p>We serve 24X365 days with our best service with High quality temp data loggers during transit, we have
+            world's best expertise staff to handle temperature sensitive shipments.</p>
+        </div>
+      </div>
+    </div>
+    <div class="provider-card">
+      <img src="/images/end.png" alt="">
+      <h2>end to end</h2>
+      <p class="provider-number">02</p>
+      <div class="cards-overlay">
+        <div class="overlay-contents">
+          <p>We are providing end to end Logistics solutions to our clients which includes Custom Clearing/Forwarding,
+            Door to Door Services, Port to Port Services & Door to Port Services, so that our clients can do more.</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="provider-card">
+      <img src="/images/VAQ MED 7LTRS OPEN.png" alt="">
+      <h2>Validated storage</h2>
+      <p class="provider-number">03</p>
+      <div class="cards-overlay">
+        <div class="overlay-contents">
+          <p>Validated storage for: Controlled ambient (+15°C to +25°C), Refrigerated (+2°C to +8°C), -25 to -15*C
+            ,Frozen (-20°C) if required, Deep frozen (-70°C) if required, Liquid nitrogen (-196°C) if required.</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="provider-card">
+      <img src="/images/truck1.png" alt="">
+      <h2>Supply </h2>
+      <p class="provider-number">04</p>
+      <div class="cards-overlay">
+        <div class="overlay-contents">
+          <p>We provide complete Supply Chain Solutions for the Life Sciences Industry,
+            Automobiles,Chemicals,Nutrition,Electronics,Electrical,Live stocks and all vital Industries requiring
+            transport and Logistics by Air and Sea as per requirement.</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="provider-card">
+      <img src="" alt="">
+      <h2>We Offers</h2>
+      <p class="provider-number">05</p>
+      <div class="cards-overlay">
+        <div class="overlay-contents">
+          <p>The
+            company offers warehousing, trucking, courier service, supply chain services, delivery and shipping services
+            for clinical trials and health care specialists.</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="provider-card">
+      <img src="" alt="">
+      <h2></h2>
+    </div>
+  </div>
+
+</body>
+
+</html>

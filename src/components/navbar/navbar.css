@@ -1,0 +1,214 @@
+.quotue-link {
+    user-select: none;
+    -moz-user-select: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1;
+    padding: 20px 25px;
+    text-align: center;
+    text-transform: none;
+    touch-action: manipulation;
+    transition: all 0.3s ease 0s;
+    vertical-align: middle;
+    white-space: nowrap;
+    border-radius: 4px;
+    background: #8e2de2;
+    background: -webkit-linear-gradient(to right, #4a00e0, #8e2de2);
+    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  .navbar {
+    background-color: var(--white);
+    padding: 0px 40px;
+    height: 80px;
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    align-items: center;
+  }
+
+  .logo {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .logo>img {
+    width: 50px;
+    height: 50px;
+    margin-top: 0px;
+    /* object-fit: contain; */
+  }
+
+  .logo>h1>span {
+    color: #fa4318;
+    font-size: 1.7rem;
+  }
+  .logo-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .logo-name>h1{
+    color: red;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+  }
+  .logo-name>h2{
+    /* color: red; */
+    font-size: 1.7rem;
+    margin-top: -5px;
+    padding: 0;
+  }
+
+  .navbar-lists {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar-links {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .navbar-links:hover {
+    color: #fa4318;
+    /* font-size: 1.1rem; */
+    transition: all 0.7s ease-in-out;
+    scale: 1.2;
+    /* background-color: #f14b4b; */
+    padding: 15px;
+    border-radius: 5px;
+    color: var(--white);
+    /* background-color: #ff6600; */
+  }
+
+  .contact-link,
+  .home-btn {
+    background-color: var(--helper);
+    border: none;
+    padding: 12px;
+    color: var(--white);
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-top: 20px;
+    background: #8e2de2;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right,
+        #4a00e0,
+        #8e2de2);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right,
+        #4a00e0,
+        #8e2de2);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  .get-btn{
+    border: none;
+    padding: 12px 25px;
+    color: var(--white);
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin-top: 20px;
+    background: #8e2de2;
+    background: -webkit-linear-gradient(to right,
+        #4a00e0,
+        #8e2de2);
+    background: linear-gradient(to right,
+        #4a00e0,
+        #8e2de2);
+        line-break: normal;
+
+  }
+  .hamburger {
+    display: none;
+    cursor: pointer;
+}
+.navbar-lists.active {
+    left: 100%;
+}
+  @media screen and (max-width:880px) {
+    .navbar {
+      position: relative;
+    }
+    .navbar-lists {
+display: none;
+  }
+  .hamburger {
+      display: block;
+  }
+  .nav-links.active{
+      display: none;
+  }
+  .navbar-lists {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+      left: -1%;
+      top: 12%;
+      background-color : rgb(27,27,27,0.97);
+      margin-top: 70px;
+      z-index: 99;
+      width: 101%;
+      height: 50vh;
+      margin: 70px auto;
+      /* margin-left: 10%; */
+  }
+  .navbar-links:hover {
+    margin-left: 20px;
+    scale: 1.2;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-out ease-in;
+    
+  }
+    
+  }
+
+  @media screen and (max-width:480px) {
+    .navbar {
+      background-color: var(--white);
+      padding: 0px 20px;
+    }
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      gap: 20px;
+      background-color: rgba(0,0,0,0.5);
+      background-color: rgb(25,141,164,0.6);
+      position: absolute;
+      top: 10%;
+      /* width: 70vw; */
+      padding: 20px;
+      left: 0%;
+      /* left: -1%; */
+      z-index: 3333;
+      width: 70%;
+  }
+  .hamburger {
+      display: block;
+  }
+  .nav-links.active{
+      display: none;
+  }
+    
+  }

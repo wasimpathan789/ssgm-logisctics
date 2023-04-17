@@ -1,0 +1,241 @@
+
+  .provide-banner {
+    background-image: url(./../../assets/service1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* object-fit: fill; */
+    height: 60vh;
+    width: 100%;
+    position: relative;
+
+  }
+
+  .provide-overlay {
+    position: absolute;
+    height: 100%;
+    background-color: rgba(18, 92, 144, 0.66);
+    width: 100%;
+  }
+
+  .provide-banner>h1 {
+    position: absolute;
+    z-index: 22;
+    color: black;
+    margin-top: 100px;
+    font-size: 48px;
+    margin-left: 50px;
+    color: white;
+  }
+
+  .provide-banner>p {
+    position: absolute;
+    z-index: 22;
+    color: black;
+    top: 90px;
+    font-size: 18px;
+    margin-top: 90px;
+    margin-left: 50px;
+    color: white;
+    width: 50%;
+
+
+  }
+
+  .provide-contents {
+    padding: 50px;
+  }
+
+  .provide-contents>h3 {
+    margin-bottom: 30px;
+    color: #61657E;
+    ;
+    font-size: 26px;
+  }
+
+
+  .provide-contents-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 50px;
+  }
+
+  .provide-contents-item>span {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--tg-primary-color);
+    box-shadow: 4px 4px 15px rgba(254, 93, 20, 0.4);
+    color: var(--white);
+    background-color: #FE5D14;
+    font-size: 15px;
+    margin-right: 15px;
+    font-weight: 900;
+    padding: 10px;
+  }
+
+  .provider-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: rgb(244, 246, 255);
+    grid-gap: 30px;
+    padding: 50px;
+
+
+  }
+
+  .provider-card {
+    /* flex: 0 0 auto; */
+    /* width: 33.33333333%; */
+    background-color: white;
+    /* margin-left: 20%; */
+    margin-top: 40px;
+    border-radius: 8px;
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    position: relative;
+  }
+
+  .provider-card>h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #1c1c1c;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .provider-card>img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+
+  .provider-number {
+    margin-bottom: 0;
+    position: absolute;
+    right: 8px;
+    top: 10px;
+    background: linear-gradient(180deg, rgba(254, 93, 20, 0.14) 0%, rgba(254, 93, 20, 0) 100%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: .8;
+    color: red;
+  }
+
+  .provider-card::after {
+    background: linear-gradient(100.16deg, #FE5D14 1.96%, rgba(28, 28, 28, 0) 198.08%);
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    z-index: -1;
+    background: linear-gradient(100.16deg, #FE5D14 1.96%, rgba(28, 28, 28, 0) 198.08%);
+    opacity: 0;
+    transition: .3s linear;
+  }
+
+  .cards-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    background-color: black;
+    background: linear-gradient(100.16deg, #FE5D14 1.96%, rgba(28, 28, 28, 0) 198.08%);
+    cursor: pointer;
+  }
+
+  .overlay-contents {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+  }
+
+  .overlay-contents>p {
+    font-size: 1.1rem;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+
+  }
+
+  .provider-card:hover .cards-overlay {
+    opacity: 0.85;
+  }
+  @media screen and (max-width:880px) {
+    .provide-banner{
+      height: 50vh;
+    }
+    .provide-banner>h1
+    {
+   margin-left: 20px;
+   margin-top: 30px;
+   font-size: 32px;
+     }
+ 
+     .provide-banner>p {
+   margin-left: 20px;
+   margin-top: 30px;
+     }
+    .provide-contents,
+    .provider-cards {
+      padding: 50px 20px;
+    }
+    .provider-cards {
+      padding: 20px;
+      grid-template-columns: repeat(2,1fr);
+    }
+    .provide-contents>h3
+    {
+      font-size: 1.3rem;
+    }
+    .provide-contents-item {
+      padding: 10px;
+    }
+    .provide-contents-item>h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+  }
+  @media screen and (max-width:680px) {
+ 
+    .provider-cards {
+      padding: 20px;
+      grid-template-columns: repeat(1,1fr);
+      /* height: 40vh; */
+    }
+  }
+  @media screen and (max-width:480px) {
+    .provide-banner{
+      height: 40vh;
+    }
+    .provide-banner>h1
+   {
+  margin-left: 20px;
+  margin-top: 30px;
+  font-size: 28px;
+  /* margin-bottom: 0; */
+    }
+
+    .provide-banner>p {
+  margin-left: 20px;
+  margin-top: 0px;
+  width: 80%;
+    }
+  }

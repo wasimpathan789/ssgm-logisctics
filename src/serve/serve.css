@@ -1,0 +1,119 @@
+.serve-container{
+    /* background-color: #a090eb ; */
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+  
+  
+  }
+  .serve-container>h2{
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 30px;
+    color: var(--h2);
+      font-size: 38px;
+      margin-bottom: 20px;
+      /* margin-left: 30px; */
+  
+  }
+  .serve-container-subtitle{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color: #565969; */
+  }
+  .serve-container-subtitle>p{
+    color: #565969;
+    font-size: 1.1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .serve-container-card>img{
+    width: 100px;
+    height: 100px;
+  }
+  .serve-container-cards{
+    /* display: grid;
+    grid-template-columns: repeat(4,1fr); */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* flex-direction: column; */
+    /* background-color: red; */
+    width: 100%;
+    padding: 40px 0px;
+  }
+  .serve-container-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    text-align: center;
+    /* background-color: blue; */
+    gap: 20px;
+  }
+  .serve-container-card>h4{
+    color: #565969;
+      color: #565969;
+      font-size: 18px;
+      font-weight: 600;
+    font-family: "Poppins", sans-serif;
+  
+  }
+  .serven-btn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+  
+  }
+  @media screen and (max-width:880px) {
+    .serve-container{
+      padding: 50px 20px;
+    }
+    
+    .serve-container-cards{
+      display: grid;
+      /* display: flex; */
+      grid-template-columns: repeat(2,1fr);
+      /* background-color: blue; */
+      grid-gap: 30px;
+      margin: auto;
+      align-items: center;
+      align-content: center;
+      
+    }
+    .serve-container-card{
+      /* background-color: purple; */
+      width: 100%;
+    }
+    .serve-container-subtitle{
+      /* background-color: blue; */
+       width: 100%;
+     }
+  }
+  @media screen and (max-width:580px) {
+    .serve-container-cards{
+     grid-template-columns: repeat(1,1fr);
+     grid-gap: 50px;
+    }
+    .serve-container>h2{
+      text-align: center;
+      font-family: "Poppins", sans-serif;
+      margin-bottom: 30px;
+      color: var(--h2);
+        font-size: 27px;
+        margin-bottom: 20px;
+        /* margin-left: 30px; */
+    
+    }
+   
+  }
+  

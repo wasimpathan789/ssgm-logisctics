@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SSGM-Logistics</title>
+  <link rel="stylesheet" href="CSS/style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+</head>
+<style>
+  .quotue-link {
+    user-select: none;
+    -moz-user-select: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1;
+    padding: 20px 31px;
+    text-align: center;
+    text-transform: none;
+    touch-action: manipulation;
+    transition: all 0.3s ease 0s;
+    vertical-align: middle;
+    white-space: nowrap;
+    border-radius: 4px;
+    background-color: #fe5d14;
+    background: #8e2de2;
+    background: -webkit-linear-gradient(to right, #4a00e0, #8e2de2);
+    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .quotue-link:hover {}
+
+  /* enquiry-container  */
+
+  .enquiry-container {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    padding: 50px 30px;
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+
+  .enquiry-container>h1 {
+    font-size: 2rem;
+    color: var(--white);
+    text-transform: uppercase;
+    word-spacing: 5px;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+  }
+
+  .enquiry-container>p {
+    font-size: 1.5rem;
+    color: var(--para);
+    margin-bottom: 15px;
+  }
+
+  .enquiry-wrapper {
+    display: flex;
+    background-image: url(../images/enquiry.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    padding: 50px;
+    margin-top: 50px;
+  }
+
+  .enquiry-container-left {
+    flex: 1.3;
+  }
+
+  .enquiry-container-right {
+    flex: 1;
+  }
+
+  .enquiry-container>h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .enquiry-container>p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .name-div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .name-div>label {
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 200px;
+    font-size: 1.1rem;
+  }
+
+  .name-div>span {
+    margin-right: 10px;
+  }
+
+  .name-div>input {
+    padding: 12px;
+    width: 100%;
+    margin-left: 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    /* transition: all 0.3 ease-in-out; */
+  }
+
+  .name-div>input:focus,
+  .name-div>textarea:focus {
+    color: var(--text-gradient);
+    color: #6612e1;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in-out;
+    border: #6612e1;
+    outline: none;
+  }
+
+  .name-div>textarea {
+    width: 90%;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .radio {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+  }
+
+  .radio-left>input,
+  .radio-right>input {
+    size: 20px;
+    font-size: 2rem;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+  }
+
+  .radio>input,
+  .radio>input {
+    size: 20px;
+    font-size: 2rem;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+  }
+
+  .submit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .submit-btn {
+    padding: 12px 60px;
+    font-size: 1rem;
+    background: linear-gradient(to right, #4a00e0, #8e2de2);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  @import url("https://fonts.googleapis.com/css2?family=Alice&family=Radio+Canada:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Rokkitt:ital,wght@0,300;0,400;0,600;0,700;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Alice&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Radio+Canada:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Rokkitt:ital,wght@0,300;0,400;0,600;0,700;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+  /* 
+  font-family: 'Alice', serif;
+  font-family: 'Radio Canada', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Rokkitt', serif;
+  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif; */
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  :root {
+    --heading: #080c24;
+    --para: #777;
+    --para: #61657e;
+
+    --white: #fff;
+    --helper: #8490ff;
+    --gradient: linear-gradient(0deg, rbg(132 144 255) 0% rgb(98 189 252) 100%);
+    --gradientSupport: -webkit-linear-gradient(0deg,
+        rgb(132 144 255) 0%,
+        rgb(98 189 252) 100%);
+
+    --shadow: opx opx 20px 0px rgb(132 144 255 / 20%);
+    --text-gradient: linear-gradient(to right, #4a00e0, #8e2de2);
+    --h3: #fe5d14;
+    --h2: #080c24;
+  }
+
+  .btn {
+    background-color: var(--helper);
+    cursor: pointer;
+    border: none;
+    padding: 20px 31px;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-family: "Poppins", sans-serif;
+    background: #8e2de2;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right,
+        #4a00e0,
+        #8e2de2);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4a00e0, #8e2de2);
+  }
+
+  .heading2 {
+    color: var(--h2);
+    font-size: 38px;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 20px;
+
+  }
+
+  .paragraph {
+    color: var(--para);
+    margin-bottom: 18px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.62;
+  }
+
+  /* navbar section  */
+  .navbar {
+    background-color: var(--white);
+    padding: 0px 80px;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* box-shadow: var(--shadow); */
+    /* color: blue; */
+  }
+
+  .logo {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .logo>img {
+    width: 100px;
+    height: 70px;
+    margin-top: 0px;
+    /* object-fit: contain; */
+  }
+
+  .logo>h1>span {
+    color: #fa4318;
+    font-size: 1.7rem;
+  }
+
+  .navbar-lists {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar-links {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .navbar-links:hover {
+    color: #fa4318;
+    /* font-size: 1.1rem; */
+    transition: all 0.7s ease-in-out;
+    scale: 1.2;
+    background-color: #f14b4b;
+    padding: 15px;
+    border-radius: 5px;
+    color: var(--white);
+    background-color: #ff6600;
+  }
+
+  .contact-link,
+  .home-btn {
+    background-color: var(--helper);
+    border: none;
+    padding: 12px;
+    color: var(--white);
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-top: 20px;
+    background: #8e2de2;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right,
+        #4a00e0,
+        #8e2de2);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right,
+        #4a00e0,
+        #8e2de2);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  /* navbar section  */
+
+
+  /* home  */
+  .home {
+    background-image: url(../images/bg1.png);
+    height: 88vh;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: first center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 150px 100px;
+  }
+
+  .home>h3 {
+    color: var(--white);
+    margin-top: 20px;
+  }
+
+  .home>h1 {
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 4rem;
+    margin-top: 20px;
+  }
+
+  .home>span {
+    color: var(--para);
+    margin-top: 20px;
+    font-size: 1.1rem;
+  }
+
+  .home-btn {
+    padding: 15px;
+  }
+
+  .quotue-link {
+    user-select: none;
+    -moz-user-select: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1;
+    padding: 20px 31px;
+    text-align: center;
+    text-transform: none;
+    touch-action: manipulation;
+    transition: all 0.3s ease 0s;
+    vertical-align: middle;
+    white-space: nowrap;
+    border-radius: 4px;
+    background-color: #fe5d14;
+    background: #8e2de2;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4a00e0, #8e2de2);
+    background: linear-gradient(to right, #4a00e0, #8e2de2);
+
+    color: white;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .quotue-link:hover {}
+
+  /* home-container */
+  .home-slide-1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .swiper-slide {
+    background-image: url(../images/bg1.png);
+    height: 88vh;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: first center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 150px 100px;
+  }
+
+  .swiper-slide>h3 {
+    color: var(--white);
+    margin-top: 20px;
+  }
+
+  .swiper-slide>h1 {
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 4rem;
+    margin-top: 20px;
+  }
+
+  .swiper-slide>span {
+    color: var(--para);
+    margin-top: 20px;
+    font-size: 1.1rem;
+  }
+
+  .home-btn {
+    padding: 15px;
+  }
+
+  .home-slide-2 {
+    background-image: url(../images/bg3.jpg);
+    height: 88vh !important;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 150px 100px;
+  }
+
+  .home-slide-2>h3 {
+    font-size: 3rem;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    /* position: absolute;
+  top: var(--swiper-navigation-top-offset,50%);
+  width: calc(var(--swiper-navigation-size)/ 44 * 27);
+  height: var(--swiper-navigation-size);
+  margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: greenyellow !important;
+  background-color: #fa4318;
+  border-radius: 50%;
+  height: 50px !important;
+  width: 50px !important;
+  padding: 15px !important;
+  margin-top: 50px !important;
+  display: none; */
+    color: white !important;
+  }
+
+  .home-prev {}
+
+  /* a-container  */
+
+  .a-wrapper {
+    display: flex;
+  }
+
+  .a-left {
+    padding: 50px 30px;
+    flex: 1.3;
+  }
+
+  .a-right {
+    flex: 1;
+  }
+
+  .a-left>h3 {
+    color: var(--h3);
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 10px;
+  }
+
+  .a-left>h2 {
+    color: var(--h2);
+    font-size: 38px;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 20px;
+  }
+
+  .a-left>p {
+    color: var(--para);
+    margin-bottom: 18px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.62;
+    /* text-transform: capitalize; */
+  }
+
+  /* a-container  */
+
+  /* About Us Page CSS  */
+
+  /* About Us Page CSS  */
+  .about-us-banner {
+    background-image: url(/images/aabout-bg.jpg);
+    height: 50vh;
+    padding: 80px 50px;
+  }
+
+  .title {
+    margin-bottom: 20px;
+    color: var(--white);
+    font-weight: 500;
+    font-size: 46px;
+    line-height: 1;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .about-us-banner>h2 {
+    color: var(--h3);
+  }
+
+  .about-us-contents {
+    padding: 50px;
+    display: flex;
+  }
+
+  .about-us-contents-left {
+    flex: 1;
+    padding-right: 50px;
+  }
+
+  /* about-item */
+
+  .about-us-contents-right {
+    flex: 1;
+
+    /* background-color: green; */
+    position: relative;
+    /* overflow: hidden; */
+    height: auto;
+  }
+
+  .about-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid: row gap 20px; ; */
+    grid-row-gap: 20px;
+    /* position: relative; */
+
+  }
+
+  .about-item {
+    background: #14448c;
+    height: 200px;
+    margin: 20px;
+    padding: 60px 0;
+    text-align: center;
+    transition: all .3s linear;
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 65px 0 0;
+    -webkit-transform: rotate(45deg);
+
+  }
+
+  .about-item:hover {
+    border-radius: 50%;
+    transition: 300ms all ease-in;
+  }
+
+  .about-item-1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 65px 0 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 132px;
+    background-color: purple;
+    position: absolute;
+    left: -3px;
+    position: absolute;
+
+  }
+
+  .about-item-2 {
+    top: 132px;
+    background-color: yellow;
+    position: absolute;
+    left: 314px;
+    position: absolute;
+
+  }
+
+  .about-item-1>h4,
+  .about-item-2>h4,
+  .about-item-3>h4,
+  .about-item-4>h4 {
+    /* color: red; */
+    color: black;
+    transform: rotate(-45deg);
+    margin-left: 53px;
+  }
+
+  .about-item-1>h4 {
+    transform: rotate(-45deg);
+    margin-left: 53px;
+  }
+
+  .about-item-2>h4 {
+    transform: rotate(-45deg);
+    margin-left: 53px;
+  }
+
+  .about-item-3>h4 {
+    color: black;
+    transform: rotate(-45deg);
+    margin-left: 53px;
+    margin-left: 45px;
+  }
+
+  .about-item-4>h4 {
+    transform: rotate(-45deg);
+    margin-left: 53px;
+    margin-left: 5px;
+    margin-top: -10px;
+  }
+
+  .about-item-3 {
+    position: absolute;
+    top: -21px;
+    background-color: red;
+    position: absolute;
+    left: 154px;
+
+  }
+
+  .about-item-4 {
+    flex-direction: column;
+    position: absolute;
+    top: 284px;
+    left: 154px;
+    /* background-color: blue; */
+
+  }
+
+  .item-img-1>img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    top: 0px;
+    transform: rotate(30deg);
+    transform: rotate(-46deg);
+    margin-left: 27px;
+    margin-top: -29px;
+
+  }
+
+  .item-img-2>img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    top: 0px;
+    transform: rotate(30deg);
+    transform: rotate(-46deg);
+    margin-left: 19px;
+    margin-top: -36px;
+  }
+
+  .item-img-3>img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    top: 0px;
+    transform: rotate(30deg);
+    margin-left: 26px;
+    margin-top: -31px;
+  }
+
+  .item-img-4>img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    top: 0px;
+    transform: rotate(30deg);
+    margin-left: 22px;
+    margin-top: -33px;
+    margin-left: -90px;
+    margin-top: -34px;
+  }
+
+  /* margin-left: -90px;
+margin-top: -34px; */
+
+  .about-us-contents>h3 {
+    margin-bottom: 20px;
+    font-style: italic;
+
+  }
+
+  .about-us-contents>span {
+    /* padding: 20px; */
+    margin-left: 100px;
+    /* background-color: red; */
+
+
+  }
+
+  /* about-card  */
+  .about-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    padding: 50px;
+  }
+
+  .about-card {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* align-items: center; */
+    gap: 40px;
+    border-radius: 5px;
+    padding: 40px 20px;
+    background-color: gray;
+  }
+
+  .about-card>h3 {
+    font-weight: 600;
+    font-size: 26px;
+    font-family: "Poppins", sans-serif;
+    background-color: blue;
+  }
+
+  .about-img {
+    width: 100%;
+    /* display: flex;
+  justify-content: flex-start;
+  align-items: center; */
+    background-color: yellow;
+  }
+
+  .about-img>img {
+    width: 40%;
+    margin: auto;
+  }
+
+  /* home-container */
+
+
+
+  /* contact  */
+
+  /* .contact-container {
+    padding: 50px 0px;
+  } */
+
+  /* .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    background-color: rgb(15, 23, 42);
+    gap: 50px;
+  } */
+
+  /* .contact-wrapper-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .contact-wrapper-top>h1 {
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    line-height: 1.2rem;
+  }
+
+  .contact-wrapper-top-bar {
+    width: 150px;
+    background-color: rgb(114, 226, 174, 0.2);
+    height: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+  } */
+
+  /* contact-wrapper-bottom  */
+  /* .contact-wrapper-bottom {
+    display: flex;
+    gap: 20px;
+  }
+
+  .contact-wrapper-bottom-left {
+    flex: 1;
+  }
+
+  .contact-wrapper-bottom-right {
+    flex: 1.3;
+  }
+
+  .contact-wrapper-bottom-left>h1 {
+    color: white;
+    font-size: 22px;
+    line-height: 1.4;
+    font-weight: 600;
+    color: rgb(250, 250, 250, 1);
+  }
+
+  .contact-wrapper-bottom-left>h3 {
+    font-family: Radio Canada, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 400;
+    margin: 0 0 0.75rem;
+    color: rgba(191, 190, 203, 1);
+  }
+
+  .line {
+    width: 100px;
+    background-color: red;
+    height: 5px;
+    border-radius: 5px;
+    background-color: rgb(114, 226, 174, 0.2);
+    border: none;
+    margin-bottom: 50px;
+    justify-content: flex-start;
+    display: flex;
+  }
+
+  .contact-phone,
+  .contact-email,
+  .contact-address {
+    background-color: rgb(22, 32, 51, 1);
+    border: 1px solid rgb(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    backdrop-filter: 12px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 20px;
+  }
+
+  .contact-phone-left,
+  .contact-email-left,
+  .contact-address-left {
+    background-color: rgb(114, 226, 174, 0.2);
+    border-radius: 50%;
+    border-radius: 9999px;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(114, 22, 6 174, 1);
+  }
+
+  .contact-email-right {}
+
+  .contact-phone-right-top>h1 {
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: rgb(250, 250, 250, 1);
+  }
+
+  .contact-email-left>i,
+  .contact-phone-left>i,
+  .contact-address-left>i {
+    color: #5db793;
+    font-size: 1.6rem;
+  }
+
+  .contact-phone-right-bottom {}
+
+  .contact-phone-right-bottom>p {
+    font-family: Radio Canada, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 400;
+    --tw-text-opacity: 1;
+    color: rgb(191, 190, 203, 1);
+    margin: 1px;
+    font-family: "Radio Canada", sans-serif;
+  } */
+
+  /* contact-wrapper-bottom-right */
+  /* .contact-wrapper-bottom-right {
+    background-color: rgb(22, 32, 51, 1);
+    border: 1px solid rgb(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    backdrop-filter: 12px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .name {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-bottom: 1.3rem;
+  }
+
+  .name>label {
+    margin-bottom: 0.375rem;
+    display: block;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 400;
+    color: rgb(250, 250, 250, 1);
+    font-family: "Radio Canada", sans-serif;
+  }
+
+  .name>input,
+  .name>textarea {
+    height: 2.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    min-height: 45px;
+    width: 90%;
+    border-radius: 0.25rem;
+    background-color: rgb(15 23 42/0.1);
+    color: rgb(191 190 203/1);
+    font-size: 0.95rem;
+    border: 1px solid rgb(255, 255, 255, 0.1);
+  }
+
+  .name>textarea {
+    height: 30vh;
+    padding: 15px;
+  } */
+
+/* Industry we serve  */
+.serve-container{
+  /* background-color: #a090eb ; */
+  padding: 50px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+
+
+}
+.serve-container>h2{
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 30px;
+  color: var(--h2);
+    font-size: 38px;
+    margin-bottom: 20px;
+    /* margin-left: 30px; */
+
+}
+.serve-container-subtitle{
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* color: #565969; */
+}
+.serve-container-subtitle>p{
+  color: #565969;
+  font-size: 1.1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.serve-container-card>img{
+  width: 100px;
+  height: 100px;
+}
+.serve-container-cards{
+  /* display: grid;
+  grid-template-columns: repeat(4,1fr); */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* flex-direction: column; */
+  /* background-color: red; */
+  width: 100%;
+  padding: 40px;
+}
+.serve-container-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  text-align: center;
+  /* background-color: blue; */
+  gap: 20px;
+}
+.serve-container-card>h4{
+  color: #565969;
+    color: #565969;
+    font-size: 18px;
+    font-weight: 600;
+  font-family: "Poppins", sans-serif;
+
+}
+.serven-btn{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+
+}
+
+/* Industry we serve  */
+
+ 
+
+  /* solution */
+  .our-solution {
+    background-color: #f9f9f9;
+    background-color: white;
+    /* height: 50vh; */
+    padding: 50px 0px;
+    overflow: hidden;
+    width: auto;
+  }
+
+  .our-solution>h1 {
+    color: var(--h2);
+    font-size: 38px;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 20px;
+    margin-left: 30px;
+
+  }
+
+  .solution-wrapper {
+    padding: 30px 30px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    /* background-color: purple; */
+  }
+
+  .solution-card {
+    display: flex;
+    /* gap: 10px; */
+    justify-content: center;
+    align-items: flex-start;
+    /* border: 1px solid red; */
+
+  }
+
+  .solution-card-left {
+    background-color: #fd5d14;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 35px;
+    flex: 0 0 auto;
+    margin-right: 30px;
+    margin-top: 20px;
+    color: white;
+  }
+
+  .solution-card-right>h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    /* color: red; */
+    font-family: "Poppins", sans-serif;
+
+  }
+
+  /* .solution-card-right>p{
+  font-size: 24px;
+    margin-bottom: 8px;
+  font-family: "Poppins", sans-serif;
+
+} */
+  /* solution */
+
+
+  @media screen and (max-width: 870px) {
+    .contact-wrapper-bottom {
+      flex-direction: column;
+    }
+
+    .contact-wrapper {
+      padding: 40px 15px;
+    }
+
+    .contact-phone {
+      margin-top: 30px;
+    }
+  }
+
+  @media screen and (max-width: 470px) {
+
+    .name>input,
+    .name>textarea {
+      width: 80%;
+    }
+
+    .contact-phone,
+    .contact-email,
+    .contact-address {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  /* footer css  */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+
+
+
+
+  /* footer css  */
+
+</style>
+
+<body>
+  <section>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="images/logo.JPG" alt="logo" />
+        <h1>SSGM <span>Logistics</span></h1>
+      </div>
+      <ul class="navbar-lists">
+        <li><a href="" class="navbar-links">Home</a></li>
+        <li><a href="#about" class="navbar-links">About</a></li>
+        <li><a href="#serve" class="navbar-links">Services</a></li>
+        <li><a href="" class="navbar-links">Home</a></li>
+        <li><a href="/pages/contact.html" class="navbar-links">Contact</a></li>
+
+        <!-- <li><a href="" class="navbar-links contact-link">Contact</a></li> -->
+        <li>
+          <a href="./pages/enquiry.html" class=" quotue-link">Get a Quotue
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </section>
+  <!-- homepage  -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide home-slide-1">
+        <div class="overlay"></div>
+        <h3 data-aos="fade-right" data-aos-duration="1500">
+          Welcome to SSGM Logistic
+        </h3>
+        <h1 data-aos="fade-right" data-aos-duration="1500">
+          a truly global <br />
+          service provider
+        </h1>
+        <span data-aos="fade-right" data-aos-duration="1500">We make your Cargo trasnport simple</span> <br>
+
+        <!-- <button class="home-btn">Explore More</button> -->
+        <a href="#about"><button class="btn">Learn More
+          <i class="fa-solid fa-arrow-right"></i>
+        </button></a>
+      </div>
+
+
+
+
+      /div>
+      <div class="swiper-slide home-slide-2">
+        <h3 data-aos="fade-right" data-aos-duration="1500">We are dealing in 80+ countries via agents and partners
+          that overall allow us to operate in 150+ countries.</h3>
+          <a href="#about"><button class="btn">Learn More
+            <i class="fa-solid fa-arrow-right"></i>
+          </button></a>
+
+      </div>
+    </div>
+    <div class="swiper-button-next home-next">
+      <!-- <i class="fa-solid fa-arrow-right"></i> -->
+    </div>
+    <div class="swiper-button-prev home-prev "></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+
+  <!-- homepage  -->
+
+
+
+  <!-- About  -->
+
+  <div class="a-container" id="about">
+    <div class="a-wrapper">
+      <div class="a-left">
+        <h3>About Our Company</h3>
+        <h2>Who we are..</h2>
+        <p>SSGM logistics is a complete logistics and supply chain service provider. ssgm is one of the largest and
+          fastest growing service providers in the integrated cold chain logistics solution space. ssgm provides
+          services such as refrigerated warehousing (cold storages), refrigerated transportation on a pan-india network.
+          always on the cusp of innovation, ssgm also provides solutions such as express refrigerated transportation for
+          ltl (less than truck load) consignments and portable cold storage. global boasts to be the only company in the
+          country to provide complete range of services with such wide gamut of solutions in the cold chain logistics
+          industry.</p>
+        <a href="./pages/about.html"><button class="btn">Learn More
+            <i class="fa-solid fa-arrow-right"></i>
+          </button></a>
+
+      </div>
+      <div class="a-right">
+        <img src="./images/pngwing.com (10).png" alt="">
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- About  -->
+
+  <!-- What we serve  -->
+
+  <div id="serve" class="serve-container">
+    <h2>Industry We Serve</h2>
+    <div class="serve-container-subtitle">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem molestiae temporibus rerum autem eveniet minima inventore asperiores impedit, et quod?</p>
+
+    </div>
+    
+    <div class="serve-container-cards">
+      <div class="serve-container-card">
+        <img src="./images/automobiles.png" alt="">
+        <h4>Automobiles products,
+          Bio products</h4>
+      </div>
+      <div class="serve-container-card">
+        <img src="./images/agri2.png" alt="">
+        <h4>Agricultural products, 
+          Fisheries, Dairy 
+          products</h4>
+      </div>
+      <div class="serve-container-card">
+        <img src="./images/textile.png" alt="">
+        <h4>Textile, Cotton 
+          products, Live
+          Animals</h4>
+      </div>
+      <div class="serve-container-card">
+        <img src="./images/machinery1.png" alt="">
+        <h4>Machinery, Electrical 
+          Equipment</h4>
+      </div>
+    
+
+    </div>
+
+    <div class="serven-btn">
+
+      <a href="./pages/provide.html"><button class="btn">Know Mores
+        <i class="fa-solid fa-arrow-right"></i>
+      </button></a>
+
+    </div>
+  </div>
+  <!-- What we serve  -->
+
+
+
+
+  <!-- Our Solution  -->
+  <main class="our-solution">
+    <h1>Our Solution</h1>
+    <div class="solution-wrapper">
+      <div class="solution-card">
+        <div class="solution-card-left proactive">
+          <i class="fa fa-object-group" aria-hidden="true"></i>
+
+
+        </div>
+        <div class="solution-card-right">
+          <h3>Proactive Reactivity </h3>
+          <p class="paragraph">On time delivery with 24x7 assistance</p>
+        </div>
+      </div>
+
+      <div class="solution-card">
+        <div class="solution-card-left">
+          <!-- <i class="fa fa-address-card-o" aria-hidden="true"></i> -->
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+
+
+        </div>
+        <div class="solution-card-right">
+          <h3>Value Added</h3>
+          <p class="paragraph">Critical destination, Hand carry options, customs clearance, storage
+            capabilities.</p>
+        </div>
+      </div>
+
+      <!-- <div class="solution-card">
+        <div class="solution-card-left">
+          <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+
+        </div>
+        <div class="solution-card-right">
+          <h3>Tailor Made</h3>
+          <p> Hassle free shipments during public holidays & remote track and trace 
+            ability.</p>
+        </div>
+      </div> -->
+      <div class="solution-card">
+        <div class="solution-card-left">
+          <i class="fa fa-users" aria-hidden="true"></i>
+        </div>
+        <div class="solution-card-right">
+          <h3>A dedicated customer service</h3>
+          <p class="paragraph">
+            • Real Time Data <br>
+            • Inbuilt Contingency plan<br>
+            • Track and trace throughout the supply chain.</p>
+        </div>
+      </div>
+      <!-- <div class="solution-card">
+        <div class="solution-card-left"></div>
+        <div class="solution-card-right">
+          <h3></h3>
+          <p></p>
+        </div>
+      </div> -->
+
+    </div>
+  </main>
+
+  <!-- Our Solution  -->
+
+
+  <!-- enquiry form  -->
+
+
+  <!-- contact  -->
+  <!-- <div id="Contacts" class="contact-container">
+    <div class="contact-wrapper">
+      <div class="contact-wrapper-top">
+        <h1>Contact</h1>
+        <div class="contact-wrapper-top-bar">
+          <span></span>
+        </div>
+      </div>
+      <div class="contact-wrapper-bottom">
+        <div class="contact-wrapper-bottom-left">
+          <h1>Contact Information</h1>
+          <h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A
+            omnis, iusto harum possimus non praesentium qui facere.
+          </h3>
+          <div class="line">
+            <hr />
+          </div>
+          <hr class="line" />
+          <div class="contact-phone">
+            <div class="contact-phone-left">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="contact-phone-right">
+              <div class="contact-phone-right-top">
+                <h1>Contact on phone</h1>
+              </div>
+              <div class="contact-phone-right-bottom">
+                <p>+91- 8956477791</p>
+                <p>+91- 9309754402</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-email">
+            <div class="contact-email-left">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="contact-email-right">
+              <div class="contact-phone-right-top">
+                <h1>Contact on mail</h1>
+              </div>
+              <div class="contact-phone-right-bottom">
+                <p>band.thate@ssgmlogistics.com</p>
+                <p>contact@ssgmlogistics.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-address">
+            <div class="contact-address-left">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="contact-address-right">
+              <div class="contact-phone-right-top">
+                <h1>Contact address</h1>
+              </div>
+              <div class="contact-phone-right-bottom">
+                <p>
+                  Office No. 06,Ground floor, <br />
+                  Kamalraj Shivdarshan, <br />
+
+                  Near Mutthut Finance,Sambhaji Raje Chowk, <br />
+                  Dighi Pune 411015.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-wrapper-bottom-right">
+          <form action="">
+            <div class="form-wrapper">
+              <div class="name">
+                <label htmlFor="">Name</label>
+                <input type="text" placeholder="Enter your name " />
+              </div>
+              <div class="name">
+                <label htmlFor="">Email</label>
+                <input type="email" placeholder="Enter your email" />
+              </div>
+              <div class="name">
+                <label htmlFor="">Mobile Number</label>
+                <input type="text" placeholder="Enter your mobile number" />
+              </div>
+              <div class="name">
+                <label htmlFor="">Message</label>
+                <textarea name="" id="" cols="30" rows="10">
+Type your message here</textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  </section>
+  <!-- contact  -->
+
+  <footer class="footer">
+  	 <div class="container">
+  	 	<div class="row">
+  	 		<div class="footer-col">
+  	 			<h4>company</h4>
+  	 			<ul>
+  	 				<li><a href="#">SSGM logistics is a complete logistics and supply chain service provider. ssgm is one of the largest and fastest growing service providers in the integrated cold chain logistics solution space.</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>Address</h4>
+  	 			<ul>
+  	 				<li><a href="#">Office No. 06,Ground floor,
+              Kamalraj Shivdarshan,
+              Near Mutthut Finance,Sambhaji Raje Chowk,
+              Dighi Pune 411015. </a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>Email Address</h4>
+  	 			<ul>
+  	 				<li><a href="#">band.thate@ssgmlogistics.com</a></li>
+  	 				<li><a href="#">contact@ssgmlogistics.com</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>follow us</h4>
+  	 			<div class="social-links">
+  	 				<a href="#"><i class="fab fa-facebook-f"></i></a>
+  	 				<a href="#"><i class="fab fa-twitter"></i></a>
+  	 				<a href="#"><i class="fab fa-instagram"></i></a>
+  	 				<a href="#"><i class="fab fa-linkedin-in"></i></a>
+  	 			</div>
+  	 		</div>
+  	 	</div>
+  	 </div>
+  </footer>
+
+  <script>
+    AOS.init();
+
+    const about = [{ title: "", img: "/images/bg3.jpg" },
+    { title: "", img: "/images/bg3.jpg" },
+    { title: "", img: "/images/bg3.jpg" },
+    { title: "", img: "/images/bg3.jpg" },
+    { title: "", img: "/images/bg3.jpg" },
+    { title: "", img: "/images/bg3.jpg" },
+    ];
+
+    var swiper = new Swiper(".mySwiper", {
+      cssMode: true,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      keyboard: {
+        enabled: true,
+      },
+      mousewheel: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      mousewheel: true,
+      keyboard: true,
+    });
+  </script>
+</body>
+
+</html>

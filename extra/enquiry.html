@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<style>
+  .navbar {
+  background-color: var(--white);
+  padding: 0px 80px;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* box-shadow: var(--shadow); */
+  /* color: blue; */
+}
+.logo {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.logo > img {
+  width: 100px;
+  height: 70px;
+  margin-top: 0px;
+  /* object-fit: contain; */
+}
+.logo > h1 > span {
+  color: #fa4318;
+  font-size: 1.7rem;
+}
+
+.navbar-lists {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-links {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+.navbar-links:hover {
+  color: #fa4318;
+  /* font-size: 1.1rem; */
+  transition: all 0.7s ease-in-out;
+  scale: 1.2;
+  background-color: #f14b4b;
+  padding: 15px;
+  border-radius: 5px;
+  color: var(--white);
+  background-color: #ff6600;
+}
+.contact-link,
+.home-btn {
+  background-color: var(--helper);
+  border: none;
+  padding: 12px;
+  color: var(--white);
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-top: 20px;
+  background: #8e2de2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #4a00e0,
+    #8e2de2
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #4a00e0,
+    #8e2de2
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+  /* home  */
+.home {
+  background-image: url(../images/bg1.png);
+  height: 88vh;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  justify-content: first center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 150px 100px;
+}
+.home > h3 {
+  color: var(--white);
+  margin-top: 20px;
+}
+.home > h1 {
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 4rem;
+  margin-top: 20px;
+}
+.home > span {
+  color: var(--para);
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+.home-btn {
+  padding: 15px;
+}
+.quotue-link {
+  user-select: none;
+  -moz-user-select: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1;
+  padding: 20px 31px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  transition: all 0.3s ease 0s;
+  vertical-align: middle;
+  white-space: nowrap;
+  border-radius: 4px;
+  background-color: #fe5d14;
+  background: #8e2de2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4a00e0, #8e2de2);
+  background: linear-gradient(to right, #4a00e0, #8e2de2);
+
+  color: white;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.quotue-link:hover {
+}
+
+  /* enquiry-container  */
+
+.enquiry-container {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  padding: 50px 30px;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+.enquiry-container > h1 {
+  font-size: 2rem;
+  color: var(--white);
+  text-transform: uppercase;
+  word-spacing: 5px;
+  letter-spacing: 5px;
+  margin-bottom: 15px;
+}
+.enquiry-container > p {
+  font-size: 1.5rem;
+  color: var(--para);
+  margin-bottom: 15px;
+}
+.enquiry-wrapper {
+  display: flex;
+  background-image: url(../images/enquiry.jpg);
+  background-size: cover;
+  border-radius: 10px;
+  padding: 50px;
+  margin-top: 50px;
+}
+.enquiry-container-left {
+  flex: 1.3;
+}
+.enquiry-container-right {
+  flex: 1;
+}
+.enquiry-container > h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+.enquiry-container > p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.name-div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.name-div > label {
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 200px;
+  font-size: 1.1rem;
+}
+.name-div > span {
+  margin-right: 10px;
+}
+.name-div > input {
+  padding: 12px;
+  width: 100%;
+  margin-left: 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  /* transition: all 0.3 ease-in-out; */
+}
+.name-div > input:focus,
+.name-div > textarea:focus {
+  color: var(--text-gradient);
+  color: #6612e1;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
+  border: #6612e1;
+  outline: none;
+}
+.name-div > textarea {
+  width: 90%;
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  font-size: 1rem;
+}
+.radio {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start;
+}
+.radio-left > input,
+.radio-right > input {
+  size: 20px;
+  font-size: 2rem;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+.radio > input,
+.radio > input {
+  size: 20px;
+  font-size: 2rem;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+.submit {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.submit-btn {
+  padding: 12px 60px;
+  font-size: 1rem;
+  background: linear-gradient(to right, #4a00e0, #8e2de2);
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* enquiry-container  */
+</style>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+          <img src="images/logo.JPG" alt="logo" />
+          <h1>SSGM <span>Logistics</span></h1>
+        </div>
+        <ul class="navbar-lists">
+          <li><a href="" class="navbar-links">Home</a></li>
+          <li><a href="" class="navbar-links">About</a></li>
+          <li><a href="" class="navbar-links">Services</a></li>
+          <li><a href="" class="navbar-links">Home</a></li>
+          <li><a href="" class="navbar-links">Contact</a></li>
+
+          <!-- <li><a href="" class="navbar-links contact-link">Contact</a></li> -->
+          <li>
+            <a href="" class=" quotue-link">Get a Quotue
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <section class="enquiry-container">
+        <h1>Enquiry form</h1>
+        <p>If you have any enquiry, kinldy take a moment to fill up a form. Our representive will contact you shortly</p>
+        <div class="enquiry-wrapper">
+          <div class="enquiry-container-left">
+            <form action="">
+              <div class="name-div">
+                <label for="">First Name</label>
+                <span>:</span>
+                <input type="text" placeholder="Customer First Name">
+    
+              </div>
+              <div class="name-div">
+                <label for="">Surame</label>
+                <span>:</span>
+                <input type="text" placeholder="Customer Surame">
+    
+              </div>
+              <div class="name-div">
+                <label for="">Email</label>
+                <span>:</span>
+                <input type="email" placeholder="Customer Email address">
+    
+              </div>
+              <div class="name-div">
+                <label for="">Company</label>
+                <span>:</span>
+                <input type="text" placeholder="Company Name">
+    
+              </div>
+              <div class="name-div">
+                <label for="">Address</label>
+                <span>:</span>
+                <!-- <input type="text" placeholder="Address"> -->
+                <textarea placeholder="Address" name="" id="" cols="30" rows="4"></textarea>
+    
+              </div>
+              <div class="name-div">
+                <label for="">Country</label>
+                <span>:</span>
+                <input type="text" placeholder="Country Name">
+    
+              </div>
+              <div class="name-div">
+                <label for="">Telephone</label>
+                <span>:</span>
+                <input type="number" placeholder="Telephone">
+    
+              </div>
+              <div class="name-div">
+                <label for="">Collection Address</label>
+                <span>:</span>
+                <textarea placeholder="Collection Address" name="" id="" cols="30" rows="4"></textarea>
+    
+    
+              </div>
+              <div class="name-div">
+                <label for="">Delivery Address</label>
+                <span>:</span>
+                <textarea placeholder="Delivery Address" name="" id="" cols="30" rows="4"></textarea>
+    
+    
+              </div>
+              <div class="name-div">
+                <label for="">Shipment Content</label>
+                <span>:</span>
+                <input type="text" placeholder="Shipment Content">
+    
+              </div>
+              <div class="name-div">
+                <label for="">Dangerous Goods</label>
+                <span>:</span>
+                <div class="radio">
+                  <input type="radio" name="negative" value="Yes"> Yes </input>
+                  <input type="radio" name="negative" value="no"> No </input>
+                </div>
+              </div>
+              <div class="name-div">
+                <label for="">Shipment Weight</label>
+                <span>:</span>
+                <input type="text" placeholder="Shipment Weight (kg)">
+    
+              </div>
+    
+              <div class="name-div">
+                <label for="">Special Instructions</label>
+                <span>:</span>
+                <textarea placeholder="Special Instructions" name="" id="" cols="30" rows="4"></textarea>
+    
+              </div>
+              <div class="name-div">
+                <label for="">Packaging Required</label>
+                <span>:</span>
+                <div class="radio">
+                  <input type="radio" name="negative" value="Yes"> Yes </input>
+                  <input type="radio" name="negative" value="no"> No </input>
+                </div>
+              </div>
+              <div class="submit">
+                <button class="submit-btn">Submit</button>
+              </div>
+    
+            </form>
+          </div>
+          <div class="enquiry-container-right">h</div>
+    
+    
+        </div>
+    
+    
+    
+      </section>
+    
+</body>
+</html>

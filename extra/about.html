@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/CSS/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+<style>
+  .about-us-banner {
+    background-image: url(/images/aabout-bg.jpg);
+    height: 50vh;
+    padding: 80px 50px;
+  }
+
+  .title {
+    margin-bottom: 20px;
+    color: var(--white);
+    font-weight: 500;
+    font-size: 46px;
+    line-height: 1;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .about-us-banner>h2 {
+    color: var(--h3);
+  }
+
+  .about-us-contents {
+    padding: 50px;
+    display: flex;
+  }
+
+  .about-us-contents-left {
+    flex: 1;
+    padding-right: 50px;
+  }
+
+  .about-us-contents-left>h3 {
+    margin-bottom: 20px;
+  }
+
+  /* about-item */
+
+  .about-us-contents-right {
+    flex: 1;
+
+    /* background-color: green; */
+    position: relative;
+    /* overflow: hidden; */
+    height: auto;
+  }
+
+  .about-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid: row gap 20px; ; */
+    grid-row-gap: 20px;
+    /* position: relative; */
+
+  }
+
+  .about-item {
+    background: #14448c;
+    height: 200px;
+    margin: 20px;
+    padding: 60px 0;
+    text-align: center;
+    transition: all .3s linear;
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 65px 0 0;
+    -webkit-transform: rotate(45deg);
+
+  }
+
+  .about-item:hover {
+    border-radius: 50%;
+    transition: 300ms all ease-in;
+  }
+
+  .about-item-1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 65px 0 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 132px;
+    background-color: purple;
+    position: absolute;
+    left: -3px;
+    position: absolute;
+
+  }
+
+  .about-item-2 {
+    top: 132px;
+    background-color: yellow;
+    position: absolute;
+    left: 314px;
+    position: absolute;
+
+  }
+
+  .about-item-1>h4,
+  .about-item-2>h4,
+  .about-item-3>h4,
+  .about-item-4>h4 {
+    color: black;
+    transform: rotate(-45deg);
+    margin-left: 53px;
+  }
+
+  .about-item-1>h4 {
+    transform: rotate(-45deg);
+    margin-left: 53px;
+  }
+
+  .about-item-2>h4 {
+    transform: rotate(-45deg);
+    margin-left: 53px;
+  }
+
+  .about-item-3>h4 {
+    color: black;
+    transform: rotate(-45deg);
+    margin-left: 53px;
+    margin-left: 45px;
+  }
+
+  .about-item-4>h4 {
+    transform: rotate(-45deg);
+    margin-left: 53px;
+    margin-left: 5px;
+    margin-top: -10px;
+  }
+
+  .about-item-3 {
+    position: absolute;
+    top: -21px;
+    background-color: red;
+    position: absolute;
+    left: 154px;
+
+  }
+
+  .about-item-4 {
+    flex-direction: column;
+    position: absolute;
+    top: 284px;
+    left: 154px;
+  }
+
+  .item-img-1>img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    top: 0px;
+    transform: rotate(30deg);
+    transform: rotate(-46deg);
+    margin-left: 27px;
+    margin-top: -29px;
+
+  }
+
+  .item-img-2>img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    top: 0px;
+    transform: rotate(30deg);
+    transform: rotate(-46deg);
+    margin-left: 19px;
+    margin-top: -36px;
+  }
+
+  .item-img-3>img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    top: 0px;
+    transform: rotate(30deg);
+    margin-left: 26px;
+    margin-top: -31px;
+  }
+
+  .item-img-4>img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    top: 0px;
+    transform: rotate(30deg);
+    margin-left: 22px;
+    margin-top: -33px;
+    margin-left: -90px;
+    margin-top: -34px;
+  }
+
+  .about-us-contents>h3 {
+    margin-bottom: 20px;
+    font-style: italic;
+
+  }
+
+  .about-us-contents>span {
+    /* padding: 20px; */
+    margin-left: 100px;
+    /* background-color: red; */
+
+
+  }
+
+  .about-us-experience {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-us-experience>h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-family: "Poppins", sans-serif;
+
+  }
+
+  .experience-contents {
+    display: flex;
+  }
+
+  .about-us-experience>span,
+  .about-us-circle {
+    background-color: red;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+  }
+
+  .experience-contents>span {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--tg-primary-color);
+    box-shadow: 4px 4px 15px rgba(254, 93, 20, 0.4);
+    color: var(--white);
+    background-color: #FE5D14;
+    font-size: 15px;
+    margin-right: 15px;
+    font-weight: 900;
+  }
+
+  .experience-contents>p {
+    display: flex;
+    align-items: baseline;
+    color: #1C1C1C;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-family: "Poppins", sans-serif;
+
+  }
+</style>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/logo.JPG" alt="logo" />
+      <h1>SSGM <span>Logistics</span></h1>
+    </div>
+    <ul class="navbar-lists">
+      <li><a href="/index.html" class="navbar-links">Home</a></li>
+      <li><a href="#about" class="navbar-links">About</a></li>
+      <li><a href="" class="navbar-links">Services</a></li>
+      <li><a href="" class="navbar-links">Home</a></li>
+      <li><a href="" class="navbar-links">Contact</a></li>
+
+      <!-- <li><a href="" class="navbar-links contact-link">Contact</a></li> -->
+      <li>
+        <a href="#enquiry" class=" quotue-link">Get a Quotue
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div class="about-us-container">
+    <div class="about-us-banner">
+      <h3 class="title">About Us</h3>
+      <h2>SSGM Logistics</h2>
+    </div>
+    <div class="about-us-contents">
+      <div class="about-us-contents-left">
+        <h2 class="heading2">We are Cold Chain Consultants..</h2>
+        <h3>GLOBAL SPECIALISTS IN HEALTHCARE TEMPERATURE SENSITIVE SUPPLY CHAIN</h3>
+        <span class="paragraph">Cold Chain Consultants, has offices located around the world to assist the
+          pharmaceutical and life science industries demand for supply chain optimisation, GDP, regulatory
+          compliance and temperature controlled supply chain requirements. Cold Chain Consultants offers
+          unique and specialist services focusing on the compliance and operational requirements of
+          temperature sensitive supply chain.</span>
+        <div class="bottom">
+          <br>
+          <p class="paragraph"> The cold chain involves the transportation of temperature sensitive products along a
+            supply chain through
+            thermal and refrigerated packaging methods and the logistical planning to protect the integrity of these
+            shipments. There are several means in which cold chain products can be transported, including refrigerated
+            trucks and railcars, refrigerated cargo ships as well as by air cargo.</p>
+
+
+          <div class="about-us-experience">
+            <h2>Key Features</h2>
+            <div class="experience-contents">
+
+              <span class="about-us-circle"> <i class="fa fa-check" aria-hidden="true"></i></span>
+              <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1500"> Experience in
+                Temperature Control Solutions for Investigational Pharmaceuticals.</p>
+            </div>
+            <div class="experience-contents">
+
+              <span class="about-us-circle"> <i class="fa fa-check" aria-hidden="true"></i></span>
+              <p> Experience in Direct to Patient Delivery
+                Programs , Cell Therapy Logistics and Life Saving Drug Programs.</p>
+            </div>
+            <div class="experience-contents">
+
+              <span class="about-us-circle"> <i class="fa fa-check" aria-hidden="true"></i></span>
+              <p> Specialties: Final Leg Distribution to Bulk Import.</p>
+            </div>
+            <div class="experience-contents">
+
+              <span class="about-us-circle"> <i class="fa fa-check" aria-hidden="true"></i></span>
+              <p> Vacuum Insulated Panels and Specific Phase Materials.</p>
+            </div>
+            <div class="experience-contents">
+
+              <span class="about-us-circle"> <i class="fa fa-check" aria-hidden="true"></i></span>
+              <p> Single use EPS shippers, handling processes and contingencies.</p>
+            </div>
+            <div class="experience-contents">
+
+              <span class="about-us-circle"> <i class="fa fa-check" aria-hidden="true"></i></span>
+              <p data-aos="fade-right" data-aos-duration="3000"> Import & Export Regulations for Pharmaceuticals &
+                Clinical Trial Specimens accross Asia. ( - from Pakistan to Seoul and Mongolia to New Zealand..).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-us-contents-right">
+        <div class="about-items">
+
+          <div class=" about-item about-item-1">
+            <div class="item-img-1"><img src="/images/consulting.png" alt=""></div>
+            <h4>Consulting Services</h4>
+          </div>
+          <div class="about-item about-item-2">
+            <div class="item-img-2"><img src="/images/auditing.png" alt=""></div>
+            <h4>Auditing – GDP GAP Analysis</h4>
+          </div>
+          <div class="about-item about-item-3">
+            <div class="item-img-3"><img src="/images/temprature.png" alt=""></div>
+            <h4>Temperature Sensitive Supply Chain Optimization</h4>
+          </div>
+          <div class="about-item about-item-4">
+            <div class="item-img-4"><img src="/images/quality.png" alt=""></div>
+            <h4>Qualification & Validation</h4>
+          </div>
+          <!-- <div class="about-item">
+                        <h3>Auditing – GDP GAP Analysis</h3>
+                        <div class="about-us-img">
+                            <img src="" alt="">
+    
+                        </div>
+                    </div>
+                    <div class="about-item">
+                        <h3>Temperature Sensitive Supply Chain Optimization</h3>
+                        <div class="about-us-img">
+                            <img src="" alt="">
+    
+                        </div>
+                    </div>
+                    <div class="about-item">
+                        <h3>Qualification and Validation</h3>
+                        <div class="about-us-img">
+                            <img src="" alt="">
+    
+                        </div>
+                    </div> -->
+
+
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <script>
+    AOS.init();
+  </script>
+
+
+</body>
+
+</html>
