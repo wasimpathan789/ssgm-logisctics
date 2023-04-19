@@ -86,7 +86,8 @@
     cursor: pointer;
     background: linear-gradient(rgba(255,255,255, 0) 0%, rgba(136,160,255,0.46) 217.91%);
     box-shadow: 0px 72px 49px -51px rgba(136,160,255,0.21);
-    background-color: red;
+    /* background-color: red; */
+    box-shadow: rgba(245, 6, 50, 0.97) 0px 7px 29px 0px;;
   }
   .swiper-horizontal{
     overflow: visible;
@@ -125,7 +126,7 @@
 @media screen and (max-width:880px) {
   .solution-wrapper {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
     /* background-color: red; */
    
@@ -133,11 +134,36 @@
   .solution-wrapper {
     padding: 30px 20px;
   }
+   .solution-slider{
+    padding: 20px;
+   }
+  /* .solution-slider{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  } */
+
+
 }
 @media screen and (max-width:740px) {
   .solution-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0px;
+
+  }
+  .s-cards{
+    padding: 0px;
+    /* background-color: red; */
+  }
+  .s-card{
+    /* background-color: red; */
+    height: auto;
+  }
+}
+@media screen and (max-width:640px) {
+  .solution-wrapper {
     grid-template-columns: repeat(1, 1fr);
   }
+  
 }
 @media screen and (max-width:580px) {
   .our-solution>h1 {

@@ -12,32 +12,32 @@ const ServicePage = () => {
   return (
     <div>
       <Navbar />
-      <section class="provide-banner">
-        <h1>Our Services</h1>
-        <p>
+      <section className="provide-banner">
+        <h1 data-aos="fade-right" data-aos-duration="1500">Our Services</h1>
+        <p data-aos="fade-right" data-aos-duration="1500">
           We are providing entire supply chain solutions for today’s adaptive
           trial landscape, we ship materials at all temperature ranges to
           investigator sites, depots, and directly to patients’ homes.
         </p>
-        <div class="services-slider"></div>
-        <div class="provide-overlay"></div>
+        <div className="services-slider"></div>
+        <div className="provide-overlay"></div>
       </section>
-      <div class="provide-contents">
-        <h3>
+      <div className="provide-contents">
+        <h3 data-aos="fade-left" data-aos-duration="1500">
           Providing flexible supply chain solutions for today’s adaptive trial
           landscape, we ship materials at all temperature ranges to investigator
           sites, depots, and directly to patients’ homes.
         </h3>
 
-        <div class="provide-contents-item">
-          <span class="about-us-circle">
+        <div  data-aos="fade-up" data-aos-duration="1500" className="provide-contents-item">
+          <span className="about-us-circle">
           <ArrowForwardIcon style={{fontSize: "20px", fontWeight: "600"}}/>
 
           </span>
           <h3>Transport of biological specimens to all regional labs</h3>
         </div>
-        <div class="provide-contents-item">
-        <span class="about-us-circle">
+        <div data-aos="fade-up" data-aos-duration="1500" className="provide-contents-item">
+        <span className="about-us-circle">
         <ArrowForwardIcon style={{fontSize: "20px", fontWeight: "600"}}/>
 
           </span>
@@ -46,8 +46,8 @@ const ServicePage = () => {
             test kit building
           </h3>
         </div>
-        <div class="provide-contents-item">
-        <span class="about-us-circle">
+        <div  data-aos="fade-up" data-aos-duration="1500" className="provide-contents-item">
+        <span className="about-us-circle">
             <ArrowForwardIcon style={{fontSize: "20px", fontWeight: "600"}}/>
           </span>
           <h3>
@@ -55,8 +55,8 @@ const ServicePage = () => {
             including relabeling when needed
           </h3>
         </div>
-        <div class="provide-contents-item">
-        <span class="about-us-circle">
+        <div data-aos="fade-up" data-aos-duration="1500" className="provide-contents-item">
+        <span className="about-us-circle">
         <ArrowForwardIcon style={{fontSize: "20px", fontWeight: "600"}}/>
 
           </span>
@@ -65,15 +65,15 @@ const ServicePage = () => {
             and ancillary supplies to anywhere in the world
           </h3>
         </div>
-        <div class="provide-contents-item">
-        <span class="about-us-circle">
+        <div data-aos="fade-up" data-aos-duration="1500" className="provide-contents-item">
+        <span className="about-us-circle">
         <ArrowForwardIcon style={{fontSize: "20px", fontWeight: "600"}}/>
 
           </span>
           <h3>Direct to/from patient and home healthcare services</h3>
         </div>
-        <div class="provide-contents-item">
-        <span class="about-us-circle">
+        <div data-aos="fade-up" data-aos-duration="1500" className="provide-contents-item">
+        <span className="about-us-circle">
         <ArrowForwardIcon style={{fontSize: "20px", fontWeight: "600"}}/>
 
           </span>
@@ -83,13 +83,13 @@ const ServicePage = () => {
           </h3>
         </div>
       </div>
-      <div class="provider-cards">
-        <div class="provider-card">
+      <div className="provider-cards">
+        <div data-aos="fade-down" data-aos-duration="1500" className="provider-card">
           <img src={twentyFour} alt="" />
           <h2>24X365 days</h2>
-          <p class="provider-number">01</p>
-          <div class="cards-overlay">
-            <div class="overlay-contents">
+          <p className="provider-number">01</p>
+          <div className="cards-overlay">
+            <div className="overlay-contents">
               <p>
                 We serve 24X365 days with our best service with High quality
                 temp data loggers during transit, we have world's best expertise
@@ -98,12 +98,12 @@ const ServicePage = () => {
             </div>
           </div>
         </div>
-        <div class="provider-card">
+        <div data-aos="fade-up" data-aos-duration="1500" className="provider-card">
           <img src={end} alt="" />
           <h2>end to end</h2>
-          <p class="provider-number">02</p>
-          <div class="cards-overlay">
-            <div class="overlay-contents">
+          <p className="provider-number">02</p>
+          <div className="cards-overlay">
+            <div className="overlay-contents">
               <p>
                 We are providing end to end Logistics solutions to our clients
                 which includes Custom Clearing/Forwarding, Door to Door
@@ -113,12 +113,12 @@ const ServicePage = () => {
             </div>
           </div>
         </div>
-        <div class="provider-card">
+        <div data-aos="fade-down" data-aos-duration="1500" className="provider-card">
           <img src={vaq} alt="" />
           <h2>Validated storage</h2>
-          <p class="provider-number">03</p>
-          <div class="cards-overlay">
-            <div class="overlay-contents">
+          <p className="provider-number">03</p>
+          <div className="cards-overlay">
+            <div className="overlay-contents">
               <p>
                 Validated storage for: Controlled ambient (+15°C to +25°C),
                 Refrigerated (+2°C to +8°C), -25 to -15*C ,Frozen (-20°C) if
@@ -128,12 +128,12 @@ const ServicePage = () => {
             </div>
           </div>
         </div>
-        <div class="provider-card">
+        <div data-aos="fade-up" data-aos-duration="1500" className="provider-card">
           <img src={truck1} alt="" />
           <h2>Supply </h2>
-          <p class="provider-number">04</p>
-          <div class="cards-overlay">
-            <div class="overlay-contents">
+          <p className="provider-number">04</p>
+          <div className="cards-overlay">
+            <div className="overlay-contents">
               <p>
                 We provide complete Supply Chain Solutions for the Life Sciences
                 Industry,
@@ -144,12 +144,12 @@ const ServicePage = () => {
             </div>
           </div>
         </div>
-        <div class="provider-card">
+        <div data-aos="fade-down" data-aos-duration="1500" className="provider-card">
           <img src={offer} alt="" />
           <h2>We Offers</h2>
-          <p class="provider-number">05</p>
-          <div class="cards-overlay">
-            <div class="overlay-contents">
+          <p className="provider-number">05</p>
+          <div className="cards-overlay">
+            <div className="overlay-contents">
               <p>
                 The company offers warehousing, trucking, courier service,
                 supply chain services, delivery and shipping services for
@@ -158,7 +158,7 @@ const ServicePage = () => {
             </div>
           </div>
         </div>
-        {/* <div class="provider-card">
+        {/* <div className="provider-card">
       <img src="" alt=""/>
       <h2></h2>
     </div> */}

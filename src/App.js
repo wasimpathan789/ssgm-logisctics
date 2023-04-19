@@ -9,13 +9,16 @@ import About from './components/about/About';
 import Serve from './serve/Serve';
 import ServicePage from './pages/servicePage/ServicePage';
 import AOS from 'aos';
-
-
-const App = () => {
+import 'aos/dist/aos.css';
+import CeoPage from './pages/ceoPage/CeoPage';
+import ScrollButton from './components/scrollButton/ScrollButton';
 AOS.init();
+const App = () => {
+
 
   return (
     <Router>
+      <ScrollButton/>
     <Routes>
     <Route path="/" element={<Homepage/>}/>
 
@@ -26,9 +29,12 @@ AOS.init();
       <Route path="/aboutpage" element={<AboutPage/>}/>
       <Route path="/enquirypage" element={<EnquiryPage/>}/>
       <Route path="/contactpage" element={<ContactPage/>}/>
+      <Route path="/ceopage" element={<CeoPage/>}/>
+
 
     </Routes>
       {/* <Homepage/> */}
+      
       
       
     </Router>

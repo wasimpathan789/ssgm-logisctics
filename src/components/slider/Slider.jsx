@@ -20,7 +20,7 @@ const Slider = () => {
       autoplay={{ delay: 3000 }}
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
+      // onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log("slide change")} className="slider-swiper"
     >
       <SwiperSlide className="swiper-slide home-slide-1">
@@ -37,28 +37,25 @@ const Slider = () => {
             a truly global <br />
             service provider
           </h1>
-          <span data-aos="fade-right" data-aos-duration="1500">
+          <span data-aos="fade-left" data-aos-duration="1500" >
             We make your Cargo trasnport simple
-          </span>{" "}
+          </span>
           <br />
-          <Button title={"Learn More"} />
+          <Button data-aos="fade-up" data-aos-duration="1500" title={"Learn More"} />
         </div>
       </SwiperSlide>
-      <SwiperSlide className="swiper-slide home-slide-2">
+      {/* <SwiperSlide className="swiper-slide home-slide-2">
         <div className="slide-2-swapper">
-          {/* <div className="overlay"></div> */}
+
           <h3 data-aos="fade-right" data-aos-duration="1500">
             We are dealing in 80+ countries via agents and partners that overall
             allow us to operate in 150+ countries.
           </h3>
-          {/* <h1 data-aos="fade-right" data-aos-duration="1500">
-          a truly global <br />
-          service provider
-        </h1> */}
+      
 
           <Button title={"Learn More"} />
         </div>
-      </SwiperSlide>
+      </SwiperSlide> */}
     </Swiper>
   );
 };

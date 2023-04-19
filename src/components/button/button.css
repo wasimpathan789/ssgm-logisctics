@@ -1,5 +1,5 @@
 .btn {
-    background-color: var(--helper);
+    /* background-color: var(--helper); */
     cursor: pointer;
     border: none;
     padding: 20px 31px;
@@ -12,10 +12,13 @@
     margin-top: 20px;
     font-family: "Poppins", sans-serif;
     background: #8e2de2;
-    /* fallback for old browsers */
     background: -webkit-linear-gradient(to right,
         #4a00e0,
         #8e2de2);
-    /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #4a00e0, #8e2de2);
+  }
+  @media screen and (max-width:880px) {
+    .btn {
+        padding:2vmin  3vmin;
+    }
   }

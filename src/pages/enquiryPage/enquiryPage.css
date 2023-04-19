@@ -238,10 +238,11 @@
   .enquiry-container {
     display: flex;
     flex-direction: column;
+    flex-direction: column;
     padding: 50px 15px;
     background-color: rgb(15, 23, 42);
     gap: 50px;
-    
+    background-color: red;
   }
   .enquiry-wrapper {
     display: flex;
@@ -269,7 +270,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    background-color: red;
+    /* background-color: red; */
     width: auto;
   }
   .contact-wrapper-bottom {

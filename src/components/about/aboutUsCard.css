@@ -1,0 +1,47 @@
+.about-us-card{
+
+    /* border: 1px solid red; */
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    height: 35vh;
+    height: 100%;
+    border-radius: 7px;
+    overflow: hidden;
+    /* overflow-y: scroll; */
+    
+}
+.about-us-card-top{
+    width: 100%;
+    height: 70px;
+    background-color: blueviolet;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    /* padding: 20px; */
+    color: white;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-us-card-top:hover{
+   height: 80px;
+   cursor: pointer;
+   transition: all 300ms ease-in;
+}
+.about-us-card-left{
+    padding: 10px;
+ /* overflow-x: scroll; */
+ /* overflow: scroll; */
+
+
+}
+.about-us-card-left>ul{
+ padding: 0px 15px 15px 15px;
+ height: auto;
+ scroll-behavior: smooth;
+ overflow: hidden;
+ }
+.about-us-card-left>ul>li{
+ margin-top: 10px;
+}

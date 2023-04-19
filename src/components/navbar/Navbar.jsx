@@ -19,8 +19,9 @@ const Navbar = () => {
       <h1>SSGM <span>Logistics</span></h1>
     </div> */}
       <div className="logo">
-        <img src={log} alt="" />
+        {/* <img src={log} alt="" /> */}
         <div className="logo-name">
+          {/* <h1><span>S</span> <span>S</span><span>G</span><span>M</span></h1> */}
           <h1>SSGM</h1>
           <h2>Logistics</h2>
         </div>
@@ -28,38 +29,37 @@ const Navbar = () => {
 
       <ul className={click ? "navbar-lists" : "navbar-lists active"}>
         <li>
-          {" "}
-          <Link to={"/"} className="navbar-links">
+          <Link data-aos="fade-up" data-aos-duration="1500" to={"/"} className="navbar-links">
             Home
           </Link>
         </li>
         <li>
-          {" "}
-          <Link to={"/aboutpage"} className="navbar-links">
+
+          <Link data-aos="fade-up" data-aos-duration="1500" to={"/aboutpage"} className="navbar-links">
             About
           </Link>
         </li>
         <li>
-          {" "}
-          <Link to={"/services"} className="navbar-links">
+
+          <Link data-aos="fade-up" data-aos-duration="1500" to={"/services"} className="navbar-links">
             Services
           </Link>
         </li>
         <li>
-          {" "}
-          <Link to={"/homepage"} className="navbar-links">
-            Home
+
+          <Link data-aos="fade-up" data-aos-duration="1500" to={"/ceopage"} className="navbar-links">
+            Our CEO
           </Link>
         </li>
         <li>
-          {" "}
-          <Link to={"/contactpage"} className="navbar-links">
+
+          <Link data-aos="fade-up" data-aos-duration="1500" to={"/contactpage"} className="navbar-links">
             Contact
           </Link>
         </li>
         <li>
-          {" "}
-          <Link to="/enquirypage" className="get-btn">
+
+          <Link data-aos="fade-up" data-aos-duration="1500" to="/enquirypage" className="get-btn">
             Quotation{" "}
           </Link>
         </li>

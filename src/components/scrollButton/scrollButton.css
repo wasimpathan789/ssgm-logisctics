@@ -1,0 +1,23 @@
+.scroll-btn{
+    background: #8e2de2;
+    position: fixed;
+    z-index: 4444;
+    top: 90vh;
+    right: 30px;
+    padding: 8px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+  
+}
+.scroll-btn-icon{
+  animation: bounce2 3s ease infinite;
+
+
+}
+@keyframes bounce2 {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-10px);}
+	60% {transform: translateY(-10px);}
+}

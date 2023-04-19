@@ -3,24 +3,52 @@
     background-image: url(../../assets/bg.png);
     height: 50vh;
     padding: 80px 50px;
+    background-size: cover;
+    position: relative;
   }
 
-  .title {
+  /* .title {
     margin-bottom: 20px;
     color: var(--white);
     font-weight: 500;
     font-size: 46px;
     line-height: 1;
     font-family: "Poppins", sans-serif;
-  }
+    z-index: 999999;
+  } */
 
   .about-us-banner>h2 {
     color: var(--h3);
+    z-index: 99;
+
+
   }
+    .about-us-banner>h3 {
+    color: var(--white);
+    z-index: 99;
+    margin-bottom: 20px;
+    color: var(--white);
+    font-weight: 500;
+    font-size: 46px;
+    line-height: 1;
+    font-family: "Poppins", sans-serif;
+    z-index: 999999;
+
+  }
+  /* .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(11, 11, 11, 0.5);
+    top: 0;
+    left: 0;
+  
+  } */
 
   .about-us-contents {
     padding: 50px;
     display: flex;
+    flex-direction: column;
   }
 
   .about-us-contents-left {
@@ -42,6 +70,53 @@
     /* overflow: hidden; */
     height: auto;
   }
+
+  /* rrr  */
+  .about-us-right-items{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 30px;
+    margin-top: 30px;
+
+  }
+  .about-us-right-item{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    justify-content: space-between;
+    height: 25vh;
+    padding: 30px;
+  }
+  .item-img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .item-img>img{
+    width: 50%;
+    height: 100%;
+    background-size: contain;
+  }
+  
+  .about-us-right-item>h4{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+
+  /* rrr  */
+
+
+
+
+
+
+
+
+
 
   .about-items {
     display: grid;
@@ -125,8 +200,11 @@
   .about-item-4>h4 {
     transform: rotate(-45deg);
     margin-left: 53px;
-    margin-left: 5px;
+    margin-left: 4px;
     margin-top: -10px;
+    margin-left: 4px;
+    margin-top: -10px;
+  
   }
 
   .about-item-3 {
@@ -193,7 +271,11 @@
     margin-top: -33px;
     margin-left: -90px;
     margin-top: -34px;
+    margin-left: -84px;
+    margin-top: -31px;
     background-repeat: no-repeat;
+    margin-left: -77px;
+margin-top: -30px;
 
   }
 
@@ -225,6 +307,8 @@
 
   .experience-contents {
     display: flex;
+    /* justify-content: flex-start; */
+    align-items: center;
   }
 
   .about-us-experience>span,
@@ -261,3 +345,110 @@
     font-family: "Poppins", sans-serif;
 
   }
+
+
+  @media screen and (max-width:1200px) {
+  
+    .about-us-right-items{
+      grid-template-columns: repeat(3,1fr);
+    }
+  }
+
+  @media screen and (max-width:780px) {
+    
+    .about-us-banner {
+      background-image: url(../../assets/bg.png);
+      /* height: 50vh; */
+      padding: 80px 50px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  @media screen and (max-width:880px) {
+    
+  .about-us-banner {
+    /* background-image: url(../../assets/bg.png); */
+    height: auto;
+    padding: 80px 20px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+
+
+
+    .about-us-right-items{
+      grid-template-columns: repeat(2,1fr);
+    }
+  
+  .about-us-contents{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+  .about-us-contents-left {
+    flex: 1;
+    padding-right: 20px;
+  }
+  .about-us-contents-right {
+
+    /* position: absolute; */
+    position: static;
+    background-color: lightcoral;
+
+    
+  
+  }
+  .about-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid: row gap 20px; ; */
+    grid-row-gap: 20px;
+    /* position: relative; */
+
+  }
+  .about-item-2 {
+    top: 10px;
+    background-color: yellow;
+    position: absolute;
+    left: 0px;
+    /* position: absolute; */
+
+  }
+    
+  }
+  @media screen and (max-width:580px) {
+    .about-us-right-items{
+      grid-template-columns: repeat(1,1fr);
+    }
+    .about-us-contents-left>h3,
+    .about-us-banner>h2{
+      font-size: 1.2rem;
+    }
+    .about-us-contents-left>h2,
+    .about-us-experience>h2,
+    .title  { 
+      font-size: 1.8rem;
+    }
+    .about-us-contents-left>span,
+    .bottom>p{
+      font-size: 1.1rem;
+    }
+    .experience-contents>span {
+      width: 17px;
+      height: 17px;
+      margin-right: 15px; 
+      margin-top: 20px;
+    }
+    .experience-contents {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .experience-contents>p {
+   font-size: 1rem;
+    }
+  }
+
